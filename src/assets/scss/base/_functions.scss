@@ -1,0 +1,15 @@
+@use "sass:math";
+
+// Function for converting a px based font-size to rem.
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+@function color($theme-color) {
+  @if map-has-key($theme-colors, $theme-color) {
+    @return map-get($theme-colors, $theme-color);
+  } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$theme-color}`. "
+			+ "Available theme-color are: #{map-keys($theme-color)}.";
+  }
+}

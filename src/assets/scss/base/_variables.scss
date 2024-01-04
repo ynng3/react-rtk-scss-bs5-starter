@@ -1,0 +1,82 @@
+// fonts
+$font-size-base: 1rem;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// Theme colors
+$theme-colors: (
+  primary: #0d6efd,
+  secondary: #6c757d,
+  link: #0056b3,
+  success: #28a745,
+  danger: #070404,
+  warning: #ffc107,
+  info: #17a2b8,
+  light: #f8f9fa,
+  dark: #343a40,
+  muted: #6c757d,
+  white: #fff,
+  ) !default;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  ) !default;
+
+// Container max-width
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  ) !default;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 2,
+  ) !default;
+
+// trig
+$pi: 3.14159265359;
+$_precision: 10;
+
+// border
+$border-width: 1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  ) !default;
+$border-style: solid !default;
+$border-color: #dee2e6 !default; // $gray-300
+$border-color-translucent: rgba(black, .175) !default; // $black
+
+// table
+$table-cell-padding-y: .5rem !default;
+$table-cell-padding-x: .5rem !default;
+$table-cell-padding-y-sm: .25rem !default;
+$table-cell-padding-x-sm: .25rem !default;
+
+// grid
+$grid-gutter-width: 1.5rem;
+
+// hamburger
+$hamburger-line-width: 24px;
+$hamburger-line-height: 3px;
+$hamburger-line-gutter: 7px;

@@ -1,0 +1,34 @@
+.hamburger {
+  display: block;
+  outline: none;
+  background: none;
+  border: 0;
+
+  > span {
+    display: block;
+    width: rem($hamburger-line-width);
+    height: rem($hamburger-line-height);
+    background-color: color(dark);
+    margin: rem($hamburger-line-gutter) auto;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &.is-active {
+
+    > span {
+
+      &:nth-child(1) {
+        transform: translateY(rem($hamburger-line-gutter + $hamburger-line-height)) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(rem(0 - $hamburger-line-gutter - $hamburger-line-height)) rotate(-45deg);
+      }
+    }
+  }
+}

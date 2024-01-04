@@ -1,0 +1,43 @@
+// Breakpoints
+@mixin breakpoints($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Clearfix
+@mixin clearfix {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// Ellipsis
+@mixin ellipsis($row: 1, $line-height: 1em) {
+  @if ($row == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: $line-height;
+    height: $row * $line-height;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+  }
+}

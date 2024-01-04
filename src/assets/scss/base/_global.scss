@@ -1,0 +1,28 @@
+html {
+  /* Prevent font scaling in landscape */
+  -webkit-text-size-adjust: none; // Chrome, Safari, newer versions of Opera
+  -moz-text-size-adjust: none; // Firefox
+  -ms-text-size-adjust: none; // Ie
+  -o-text-size-adjust: none; // old versions of Opera
+}
+
+body {
+  letter-spacing: -0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  border: 0;
+}
+
+p {
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}

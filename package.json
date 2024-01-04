@@ -1,0 +1,82 @@
+{
+  "title": "React RTK SCSS Bootstrap 5 Starter Package",
+  "name": "react-rtk-scss-bs5-starter",
+  "version": "1.0.0",
+  "description": "이 패키지는 통일성 있는 설계 구조의 리액트 프로젝트를 수행하기 위한 스타팅 패키지 입니다.",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "html",
+    "responsive",
+    "theme",
+    "template",
+    "react",
+    "redux",
+    "redux toolkit",
+    "rtk",
+    "bootstrap"
+  ],
+  "homepage": "https://github.com/ynng3",
+  "license": "MIT",
+  "author": "알노리",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.61",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-helmet": "^6.1.9",
+    "@types/react-redux": "^7.1.30",
+    "@types/react-slick": "^0.23.12",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.4",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.4",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-bootstrap": "^0.32.35",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "3.1.0"
+  }
+}
