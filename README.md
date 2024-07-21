@@ -2,12 +2,14 @@
 
 This package is a starter kit for performing React projects with a consistent design structure.
 
-## Main Package Components
+## Main Package Dependencies
 
-* React (TypeScript)
-* Bootstrap
-* Redux Toolkit
-* Sass
+* [React](https://github.com/facebook/react)
+* [Typescript](https://github.com/microsoft/TypeScript)
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+* [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
+* [Sass](https://github.com/sass/sass)
 
 ## `/src` Directory Structure
 
