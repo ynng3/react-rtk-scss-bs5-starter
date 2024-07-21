@@ -2,12 +2,14 @@
 
 이 패키지는 통일성 있는 설계 구조의 리액트 프로젝트를 수행하기 위한 스타팅 패키지 입니다.
 
-## 주요 패키지 구성
+## 주요 패키지 종속성
 
-- React(Typescript)
-- Bootstrap
-- Redux Toolkit
-- Sass
+* [React](https://github.com/facebook/react)
+* [Typescript](https://github.com/microsoft/TypeScript)
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+* [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
+* [Sass](https://github.com/sass/sass)
 
 
 ## `/src` 디렉토리 구성
