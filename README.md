@@ -1,95 +1,81 @@
-# React RTK SCSS Bootstrap 5 Starter Package(react-rtk-scss-bs5-starter)
+# React RTK SCSS Bootstrap 5 Starter Package (react-rtk-scss-bs5-starter)
 
-이 패키지는 통일성 있는 설계 구조의 리액트 프로젝트를 수행하기 위한 스타팅 패키지 입니다.
+This package is a starter kit for performing React projects with a consistent design structure.
 
-## 주요 패키지 구성
+## Main Package Components
 
-- React(Typescript)
-- Bootstrap
-- Redux Toolkit
-- Sass
+* React (TypeScript)
+* Bootstrap
+* Redux Toolkit
+* Sass
 
+## `/src` Directory Structure
 
-## `/src` 디렉토리 구성
+* `src/assets`: Stores resource files such as images and SCSS files.
+* `src/components`: Stores components (commonly used components are included in the package).
+* `src/pages`: Stores route information for the router.
+* `src/store`: Stores individual store files for Redux Toolkit.
 
-- `src/assets` image, scss 파일 등의 리소스 파일을 보관
-- `src/components` Component를 보관(자주쓰는 컴포넌트가 패키지에 포함 되어 있음)
-- `src/pages` Router를 연결 시킬 라우트 정보를 보관
-- `src/store` Redux Toolkit의 개별 Store 파일을 보관
+## Main File Information
 
+* `index.tsx`: The top-level file that gathers and renders all components and rendering settings.
+* `App.tsx`: The top-level component, the first component called by `index.tsx`. It gathers components to be rendered and passes them to `index.tsx`.
+* `routes.tsx`: Collects routing information. This information is sent to the `RouteComponent` for rendering.
+* `store.tsx`: Creates a global store to manage the state through `ConfigureStore` using reducers declared in individual store files.
 
-## 주요 파일 정보
+## SCSS Information
 
-- `index.tsx` - 최상위 파일로 이곳에 모인 모든 컴포넌트와 렌더링 설정들을 종합해 렌더링 합니다.
-- `App.tsx` - 최상단 컴포넌트 이며 index.tsx에서 처음으로 호출하는 컴포넌트 입니다. 이곳에서 렌더링 시킬 컴포넌트를 모은 후에 index.tsx로 넘겨줍니다.
-- `routes.tsx` 라우팅 정보를 모아놓는 라우트 입니다. 이곳에 모인 정보는 RouteComponent로 보내지고 이 컴포넌트를 통해 렌더링 됩니다.
-- `store.tsx` 개별 Store 파일에 선언된 Reducer를 ConfigureStore를 통해 전역으로 State를 관리할 수 있는 스토어를 생성합니다.
+The Sass in this project is developed using the SMACSS methodology and references Bootstrap.
 
+We adopt a method of customizing core variables by assigning variables from Bootstrap at a higher level. This aims to provide high UI consistency for sites created with this package.
 
-## SCSS 정보
+For maintenance and code consistency in future projects, please code uniformly according to the structure below.
 
-이 프로젝트의 Sass는 SMACSS 형태의 CSS 방법론으로 제작 되었으며 Bootstrap을 참조합니다.
+* `src/assets/scss/base`: Directory where common CSS, variables, functions, and mixins for the project are declared.
+* `src/assets/scss/components`: Directory where SCSS for individual components is declared.
+* `src/assets/scss/layout`: Directory where layout-related SCSS is declared.
+* `src/assets/scss/pages`: Directory where unique styles for each page, not declared as components, are declared.
+* `src/assets/scss/theme`: Directory where theme-related SCSS is declared (used in projects that need to provide individual themes such as dark themes).
+* `src/assets/scss/style.scss`: The top-level SCSS file that gathers individual .scss files. This file is included in `index.tsx` and used for rendering.
 
-bootstrap의 변수를 bootstrap 보다 상위에서 할당 하여 핵심 변수를 커스터마이징 하는 방식을 채택합니다.
-이를 통해서 이 패키지를 통해 제작하는 사이트에 높은 UI의 통일성을 제공하는 것을 목표로 합니다.
+## Additional Information
 
-이후 프로젝트들의 유지보수 관리 및 코드 통일성을 위해 아래 구성에 따라 통일성 있게 코딩해주시기 바랍니다.
+* An example component includes a Hamburger menu button that toggles the `hamburger` store state between true and false on click.
+* An example component includes Navigation (menu configuration can be managed in `/src/store/menuSlice.tsx`).
+* An example component includes `RouteComponent` which performs routing functionality by mapping routing information from `routes.tsx`.
+* An example component includes `ScrollToAnchor` which scrolls to the specified id location when a route containing an anchor link is changed, or scrolls to the top otherwise.
 
-- `src/assets/scss/base` - 프로젝트 공통 CSS, 변수, 함수, 믹스인 등이 선언되는 디렉토리 입니다.
-- `src/assets/scss/components` - 개별 컴포넌트의 scss를 선언하는 디렉토리 입니다.
-- `src/assets/scss/layout` - 레이아웃 관련 scss를 선언하는 디렉토리 입니다.
-- `src/assets/scss/pages` - 컴포넌트로 선언되지 않은 각 page의 고유한 스타일을 선언하는 디렉토리 입니다.
-- `src/assets/scss/theme` - 테마 관련 SCSS를 선언하는 디렉토리 입니다 (다크 테마와 같은 개별 테마를 제공해야하는 프로젝트에서 사용합니다.)
-- `src/assets/scss/style.scss` - 각 .scss 파일들을 모으는 최상위 SCSS 파일이며, 이 파일이 index.tsx에 include 되어 렌더링에 사용됩니다.
-
-
-## 기타
-
-- 예제 컴포넌트로 Hamburger 메뉴 버튼이 포함되어 있습니다. 클릭시 hamburger 스토어의 state가 true 또는 false로 토글 됩니다.
-- 예제 컴포넌트로 Navigation이 포함되어 있습니다. (`/src/store/menuSlice.tsx` 에서 메뉴 구성을 관리할 수 있습니다.)
-- 예제 컴포넌트로 RouteComponet가 포함되어 있습니다. routes.tsx에서 라우트 정보를 가져와 매핑하여 라우팅 기능을 수행합니다.
-- 예제 컴포넌트로 SchrollToAnchor가 포함되어 있습니다. 라우트가 변경될 때 라우트에 앵커 링크가 포함되어 있을 경우 해당 id 위치로 스크롤 되고 그 외의 경우에는 최상단으로 스크롤 됩니다.
-
-
-## git bash 명령어 정보
+## Git Bash Command Information
 
 ### `npm start`
 
-개발 모드에서 앱을 실행합니다.\
-[http://localhost:3000](http://localhost:3000)을 열어 브라우저에서 확인하세요.
+Runs the app in development mode.  
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-편집하면 페이지가 다시 로드됩니다.\
-콘솔에도 린트 오류가 표시됩니다.
-
+The page will reload when you make edits.  
+You will also see any lint errors in the console.
 
 ### `npm test`
 
-대화형 감시 모드에서 테스트 실행기를 시작합니다.\
-자세한 내용은 [테스트 실행](https://facebook.github.io/create-react-app/docs/running-tests) 섹션을 참조하세요.
-
+Starts the test runner in interactive watch mode.  
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-'build' 폴더에 프로덕션용 앱을 빌드합니다.\
-프로덕션 모드에서 React를 올바르게 번들링하고 최상의 성능을 위해 빌드를 최적화합니다.
+Builds the app for production to the `build` folder.  
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-빌드가 축소되고 파일 이름에 해시가 포함됩니다.\
-앱을 배포할 준비가 되었습니다!
+The build is minified, and the filenames include hashes.  
+Your app is ready to be deployed!
 
-자세한 내용은 [배포](https://facebook.github.io/create-react-app/docs/deployment) 섹션을 참조하세요.
-
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
-**참고: 이는 단방향 작업입니다. 한번 `eject`하면 되돌릴 수 없습니다!**
+**Note: This is a one-way operation. Once you `eject`, you can’t go back!**
 
-빌드 도구 및 구성 선택이 만족스럽지 않으면 언제든지 '꺼내기'를 수행할 수 있습니다. 이 명령은 프로젝트에서 단일 빌드 종속성을 제거합니다.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-대신, 모든 구성 파일과 전이적 종속성(webpack, Babel, ESLint 등)을 프로젝트에 바로 복사하므로 이를 완전히 제어할 수 있습니다. 'eject'를 제외한 모든 명령은 계속 작동하지만 복사된 스크립트를 가리키므로 조정할 수 있습니다. 이 시점에서 당신은 스스로입니다.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project, so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts, so you can tweak them. At this point, you’re on your own.
 
-`eject`를 사용할 필요는 없습니다. 엄선된 기능 세트는 소규모 및 중간 배포에 적합하므로 이 기능을 사용해야 한다는 의무감을 느껴서는 안 됩니다. 그러나 우리는 이 도구를 사용할 준비가 되었을 때 사용자 정의할 수 없다면 유용하지 않다는 것을 알고 있습니다.
-
-
-#### 패키지 문의
-
-[https://github.com/ynng3]
+You don’t have to use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
