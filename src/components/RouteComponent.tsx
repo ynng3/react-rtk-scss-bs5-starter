@@ -1,15 +1,17 @@
 import * as React from 'react'
-import { Route, Routes, Navigate, useLocation } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
-import ScrollToAnchor from './scrollToAnchor';
+import useAnchor from '../hooks/useAnchor';
 
 import routes from '../routes';
 
 function RouteComponent() {
+  const anchor = useAnchor(); // useAnchor 훅 호출
+
   return (
     <>
       {/* Anchor('#' link) Component */}
-      <ScrollToAnchor />
+      {anchor}
 
       {/* router */}
       <Routes>

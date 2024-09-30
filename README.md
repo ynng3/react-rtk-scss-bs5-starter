@@ -15,6 +15,7 @@ This package is a starter kit for performing React projects with a consistent de
 
 * `src/assets`: Stores resource files such as images and SCSS files.
 * `src/components`: Stores components (commonly used components are included in the package).
+* `src/hooks`: Store custom hooks.
 * `src/pages`: Stores route information for the router.
 * `src/store`: Stores individual store files for Redux Toolkit.
 
@@ -51,23 +52,23 @@ For maintenance and code consistency in future projects, please code uniformly a
 
 ### `npm start`
 
-Runs the app in development mode.  
+Runs the app in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make edits.  
+The page will reload when you make edits.
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Starts the test runner in interactive watch mode.  
+Starts the test runner in interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.  
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified, and the filenames include hashes.  
+The build is minified, and the filenames include hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

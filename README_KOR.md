@@ -16,6 +16,7 @@
 
 - `src/assets` image, scss 파일 등의 리소스 파일을 보관
 - `src/components` Component를 보관(자주쓰는 컴포넌트가 패키지에 포함 되어 있음)
+- `src/hooks` 커스텀 훅을 보관
 - `src/pages` Router를 연결 시킬 라우트 정보를 보관
 - `src/store` Redux Toolkit의 개별 Store 파일을 보관
 
