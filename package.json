@@ -2,7 +2,7 @@
   "title": "React RTK SCSS Bootstrap 5 Starter Package",
   "name": "react-rtk-scss-bs5-starter",
   "version": "1.0.0",
-  "description": "이 패키지는 통일성 있는 설계 구조의 리액트 프로젝트를 수행하기 위한 스타팅 패키지 입니다.",
+  "description": "This package is a starter kit for performing React projects with a consistent design structure.",
   "keywords": [
     "css",
     "sass",
