@@ -15,7 +15,8 @@
     "redux",
     "redux toolkit",
     "rtk",
-    "bootstrap"
+    "bootstrap",
+    "typescript"
   ],
   "homepage": "https://github.com/ynng3",
   "license": "MIT",
